@@ -1,6 +1,6 @@
 package com.example.mvvmtest.model
 
-import com.example.mvvmtest.view.Intent
+import com.example.mvvmtest.intent.Intent
 import com.jakewharton.rxrelay2.PublishRelay
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers

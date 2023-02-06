@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
-    @Inject lateinit var dog: Dog
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             intent.setPackage("com.example.jetpacktest")
             startActivity(intent)
         }
+
     }
 
 
@@ -72,19 +71,4 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
-}
-
-class Dog () {
-    fun getName() = "Cherry"
-}
-
-@Module
-class DogModule {
-    @Provides
-    fun provideDog() = Dog()
-}
-
-@Component(modules = [DogModule::class])
-interface ApplicationComponent {
-    fun inject(activity: MainActivity)
 }

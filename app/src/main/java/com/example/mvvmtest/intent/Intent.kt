@@ -1,4 +1,4 @@
-package com.example.mvvmtest.view
+package com.example.mvvmtest.intent
 
 interface Intent<T> {
     fun reduce(oldState: T): T
